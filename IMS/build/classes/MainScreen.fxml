@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainScreenController">
+    <children>
+      <HBox prefHeight="50.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="49.0" prefWidth="733.0" text="Inventory Management System" textAlignment="CENTER">
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#exitButton" prefHeight="29.0" prefWidth="65.0" text="Exit" />
+         </children>
+      </HBox>
+      <VBox layoutX="-1.0" layoutY="50.0" prefHeight="550.0" prefWidth="401.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="400.0" text="Parts" textAlignment="CENTER" underline="true" />
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="400.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#searchPartsButton" text="Search" />
+                  <TextField fx:id="searchPartsTF" prefHeight="27.0" prefWidth="252.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="addPartButton" mnemonicParsing="false" onAction="#addPartButton" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#modifyPartButton" text="Modify" />
+                  <Button mnemonicParsing="false" onAction="#deletePartButton" text="Delete" />
+               </children>
+            </HBox>
+            <TableView fx:id="partTV" prefHeight="456.0" prefWidth="402.0">
+              <columns>
+                <TableColumn fx:id="partIdColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="partNameColumn" prefWidth="96.0" text="Name" />
+                  <TableColumn fx:id="partStockColumn" prefWidth="124.0" text="Inventory Stock" />
+                  <TableColumn fx:id="partPriceColumn" prefWidth="104.0" text="Price" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <VBox layoutX="402.0" layoutY="50.0" prefHeight="550.0" prefWidth="406.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="400.0" text="Products" textAlignment="CENTER" underline="true" />
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="400.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#searchProductsButton" text="Search" />
+                  <TextField fx:id="searchProductsTF" prefHeight="27.0" prefWidth="252.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="400.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addProductButton" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#modifyProductButton" text="Modify" />
+                  <Button mnemonicParsing="false" onAction="#deleteProductButton" text="Delete" />
+               </children>
+            </HBox>
+            <TableView fx:id="productTV" prefHeight="456.0" prefWidth="388.0">
+               <columns>
+                  <TableColumn fx:id="productIdColumn" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="productNameColumn" prefWidth="96.0" text="Name" />
+                  <TableColumn fx:id="productStockColumn" prefWidth="124.0" text="Inventory Stock" />
+                  <TableColumn fx:id="productPriceColumn" prefWidth="104.0" text="Price" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

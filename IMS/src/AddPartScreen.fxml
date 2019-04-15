@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddPartScreenController">
+    <children>
+      <VBox prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="400.0" text="Add Part" textAlignment="CENTER" underline="true">
+            </Label>
+            <HBox alignment="CENTER" prefHeight="23.0" prefWidth="400.0">
+               <children>
+                  <RadioButton fx:id="inHouseButton" mnemonicParsing="false" onAction="#inHouseSwitch" prefHeight="18.0" prefWidth="186.0" selected="true" text="In-House" />
+                  <RadioButton fx:id="outSourcedButton" mnemonicParsing="false" onAction="#outSourcedSwitch" prefHeight="18.0" prefWidth="180.0" text="Outsourced" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="21.0" prefWidth="145.0" text="ID:" />
+                  <TextField fx:id="partIDtf" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="86.0" prefHeight="40.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="21.0" prefWidth="145.0" text="Name:" />
+                  <TextField fx:id="partNametf" />
+               </children>
+            </HBox>
+            <HBox fx:id="machineVSCompanyLabel" alignment="CENTER_LEFT" layoutX="10.0" layoutY="126.0" prefHeight="40.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="21.0" prefWidth="145.0" text="Inventory Level:" />
+                  <TextField fx:id="partInvLeveltf" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="166.0" prefHeight="40.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="21.0" prefWidth="145.0" text="Price:" />
+                  <TextField fx:id="partPricetf" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="206.0" prefHeight="40.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="21.0" prefWidth="145.0" text="Minimum Value:" />
+                  <TextField fx:id="partMinValtf" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="246.0" prefHeight="40.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="21.0" prefWidth="145.0" text="Maximum Value:" />
+                  <TextField fx:id="partMaxValtf" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="286.0" prefHeight="40.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="inVsOutsourced" alignment="CENTER" prefHeight="21.0" prefWidth="145.0" text="Machine ID:" />
+                  <TextField fx:id="partInVsOuttf" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#savePartButton" prefHeight="56.0" prefWidth="100.0" text="Save" />
+                  <Button layoutX="160.0" layoutY="32.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="56.0" prefWidth="100.0" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
